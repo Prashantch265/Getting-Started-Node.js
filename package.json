@@ -1,0 +1,38 @@
+{
+  "name": "getting-started-node",
+  "version": "1.0.0",
+  "description": "Getting started with node.js express sequelize postgreSQL",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server/server.js",
+    "dev": "nodemon server/server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Prashantch265/Getting-Started-Node.js.git"
+  },
+  "keywords": [
+    "Node.js",
+    "Express",
+    "Sequelize",
+    "PostgreSQL"
+  ],
+  "author": "prashant",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Prashantch265/Getting-Started-Node.js/issues"
+  },
+  "homepage": "https://github.com/Prashantch265/Getting-Started-Node.js#readme",
+  "dependencies": {
+    "dotenv": "^8.2.0",
+    "express": "^4.17.1",
+    "express-validator": "^6.10.1",
+    "pg": "^8.6.0",
+    "pg-hstore": "^2.3.3",
+    "sequelize": "^6.6.2"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.7"
+  }
+}
