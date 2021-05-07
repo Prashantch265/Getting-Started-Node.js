@@ -1,4 +1,4 @@
-const {DataTypes, Sequelize} = require('sequelize');
+const {DataTypes} = require('sequelize');
 const sequelize = require('./index');
 
 const Student = sequelize.define('student',{
@@ -62,7 +62,7 @@ const Student = sequelize.define('student',{
     },
     temporary_province:{
         type: DataTypes.ENUM({
-            values: ['Province 1', 'Province 2', 'Bagmati', 'Gandaki', 'Lumbini', 'Karnali', 'Sudurpaschim']
+            values: ['Province 1', 'Province 2', 'Bagmati', 'Gandaki', 'Lumbini', 'Karnali', 'Sudurpaschim', '']
         })
     },
     temporary_district:{
@@ -114,7 +114,7 @@ const Student = sequelize.define('student',{
         allowNull: false
     },
     passedYear1:{
-        type: DataTypes.DATE,
+        type: DataTypes.STRING,
         allowNull: false
     },
     highschoolName:{
@@ -136,7 +136,7 @@ const Student = sequelize.define('student',{
         allowNull: false
     },
     passedYear2:{
-        type: DataTypes.DATE,
+        type: DataTypes.STRING,
         allowNull: false
     },
     program:{
