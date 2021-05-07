@@ -1,4 +1,5 @@
 const Student = require("../../database/models/students.model");
+const { validationResult } = require('express-validator');
 
 const create = async (req, res) => {
   const {
@@ -39,6 +40,13 @@ const create = async (req, res) => {
   } = req.body;
 
   try {
+
+    const errors = validationResult(req);
+
+    if(!errors.isEmpty()){
+      throw errors
+    }
+    
     const student = Student.build({
       firstname: firstname,
       midname: midname,
@@ -85,7 +93,17 @@ const create = async (req, res) => {
   }
 };
 
+const read = async(req, res) => {
+
+}
+
 const update = async(req, res) => {
   const {} = req.body;
 }
+
+const remove = async(req, res) => {
+  const {} = req.body;
+
+  
+} 
 module.exports = {create};
